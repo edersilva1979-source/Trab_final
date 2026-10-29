@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Halloween | Filmes de Terror</title>
+    <style>
+        :root {
+            color-scheme: dark;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #10101b;
+            color: #f6f0e8;
+        }
+
+        header {
+            background: #21132f;
+            padding: 24px 8%;
+            border-bottom: 3px solid #f28c28;
+        }
+
+        .topo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .marca {
+            margin: 0;
+            color: #ffb04b;
+            font-size: 1.8rem;
+        }
+
+        nav a {
+            color: #fff;
+            margin-right: 18px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            color: #ffb04b;
+        }
+
+        .hero {
+            padding: 85px 8%;
+            text-align: center;
+            background: linear-gradient(135deg, #3c1c4f, #17111d);
+        }
+
+        .hero h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin: 0 0 16px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 0 auto 28px;
+            line-height: 1.6;
+        }
+
+        .botao {
+            display: inline-block;
+            background: #ff9c32;
+            color: #1b1026;
+            padding: 13px 22px;
+            border-radius: 9px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 44px 20px;
+        }
+
+        h3 {
+            color: #ffb04b;
+        }
+
+        .grade {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #211a2d;
+            padding: 24px;
+            border: 1px solid #493457;
+            border-radius: 14px;
+        }
+
+        .card span {
+            font-size: 2.5rem;
+        }
+
+        .card p {
+            line-height: 1.6;
+            color: #d9d1e1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #21132f;
+            color: #cfc3d9;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="topo">
+            <h1 class="marca">🎃 Portal Halloween</h1>
+            <nav aria-label="Navegação principal">
+                <a href="index.html">Início</a>
+                <a href="series.html">Séries</a>
+                <a href="cadastro.html">Cadastro</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>Uma noite de arrepiar! 👻</h2>
+        <p id="mensagem-destaque">Descubra filmes assustadores para sua maratona de Halloween.</p>
+        <a class="botao" href="series.html">Explorar séries</a>
+    </section>
+
+    <main>
+        <h3>🍿 Filmes para entrar no clima</h3>
+        <div class="grade">
+            <article class="card">
+                <span>🏚️</span>
+                <h4>A Casa da Colina</h4>
+                <p>Uma sugestão fictícia de suspense sobre os mistérios de uma antiga mansão.</p>
+            </article>
+            <article class="card">
+                <span>🌕</span>
+                <h4>Noite de Lua Cheia</h4>
+                <p>Uma história fictícia de criaturas e acontecimentos inexplicáveis.</p>
+            </article>
+            <article class="card">
+                <span>🕯️</span>
+                <h4>O Último Sussurro</h4>
+                <p>Uma indicação fictícia para quem gosta de mistérios e sustos.</p>
+            </article>
+        </div>
+    </main>
+
+    <footer>Projeto educacional de Git e GitHub | Portal Halloween 🎃</footer>
+</body>
+
+</html>
