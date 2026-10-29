@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Portal Halloween</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #10101b;
+            color: #f8f2fb;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            padding: 24px 8%;
+            background: #21132f;
+            border-bottom: 3px solid #ff9c32;
+        }
+
+        .topo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        h1,
+        h2 {
+            color: #ffb04b;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffb04b;
+        }
+
+        main {
+            max-width: 720px;
+            margin: 45px auto;
+            padding: 0 20px;
+        }
+
+        form {
+            border-radius: 16px;
+            background: #241a31;
+            padding: 30px;
+            border: 1px solid #513b63;
+        }
+
+        label {
+            display: block;
+            margin: 17px 0 7px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #79668b;
+            border-radius: 8px;
+            background: #14101c;
+            color: #fff;
+            font: inherit;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 24px;
+            border: 0;
+            padding: 14px 22px;
+            border-radius: 9px;
+            background: #ff9c32;
+            color: #21132f;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ffc16f;
+        }
+
+        .aviso {
+            color: #d1c5dc;
+            font-size: .9rem;
+            line-height: 1.6;
+        }
+
+        #resultado {
+            color: #b0f2bb;
+            font-weight: bold;
+            margin-top: 16px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            background: #21132f;
+            color: #d7c9e2;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="topo">
+            <h1>🦇 Clube do Halloween</h1>
+            <nav aria-label="Navegação principal">
+                <a href="index.html">Início</a>
+                <a href="series.html">Séries</a>
+                <a href="cadastro.html">Cadastro</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h2>Cadastre seu interesse 👻</h2>
+        <p>Conte o que você gosta de assistir. Este formulário é uma demonstração educacional.</p>
+        <form id="formCadastro">
+            <label for="nome">Nome completo</label>
+            <input id="nome" name="nome" type="text" maxlength="100" required>
+
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" maxlength="150" required>
+
+            <label for="preferencia">Qual seu gênero favorito?</label>
+            <select id="preferencia" name="preferencia" required>
+                <option value="">Escolha uma opção</option>
+                <option value="Terror sobrenatural">Terror sobrenatural</option>
+                <option value="Suspense">Suspense</option>
+                <option value="Ficção científica">Ficção científica</option>
+                <option value="Mistério">Mistério</option>
+            </select>
+
+            <label for="comentario">Conte sua indicação favorita</label>
+            <textarea id="comentario" name="comentario" maxlength="500"
+                placeholder="Qual filme ou série você recomenda?"></textarea>
+
+            <button type="submit">Registrar interesse</button>
+            <p class="aviso">Demonstração: os dados não são enviados, armazenados ou compartilhados.</p>
+            <p id="resultado" role="status" aria-live="polite"></p>
+        </form>
+    </main>
+
+    <footer>Portal Halloween | Cadastro demonstrativo 🎃</footer>
+    <script>
+        document.getElementById('formCadastro').addEventListener('submit', function (evento) {
+            evento.preventDefault();
+            document.getElementById('resultado').textContent =
+                'Interesse registrado nesta demonstração! Nenhum dado foi enviado.';
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
